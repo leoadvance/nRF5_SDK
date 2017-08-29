@@ -1,0 +1,197 @@
+
+AppKey : 63964771734fbd76e3b40519d1d94a48
+Access Payload : 0223614563964771734fbd76e3b40519d1d94a48
+IV Index : 12345678
+DevKey : 9d6dd0e96eb25dc19a40ed9914f8f03f
+TTL : 04
+SEQ : 3129ab
+SRC : 0003
+DST : 1201
+Application Nonce : 02003129ab0003120112345678
+EncAccessPayload : ece888aa2169326d23f3afdfcfdc18c52fdef772
+TransMIC Size : 32 bits
+TransMIC : 69ff4433
+UpperTransportPDU : ece888aa2169326d23f3afdfcfdc18c52fdef77269ff4433
+Segment#0 : ece888aa2169326d23f3afdf
+Segment#1 : cfdc18c52fdef77269ff4433
+CTL : 00
+TTL : 04
+SEQ : 3129ab
+SRC : 0003
+DST : 1201
+SEG : 01
+MD : 00
+AKF : 00
+AID : 00
+SZMIC : 00
+SeqZero : 3129ab
+SegO : 00
+SegN : 01
+Header : 8026ac01
+Segment#0 : ece888aa2169326d23f3afdf
+LowerTransportPDU : 8026ac01ece888aa2169326d23f3afdf
+
+IVindex : 12345678
+NetKey : 7dd7364cd842ad18c17c2b820c84c3d6
+CTL : 00
+TTL : 04
+SEQ : 3129ab
+
+SRC : 0003
+DST : 1201
+LowerTransportPDU : 8026ac01ece888aa2169326d23f3afdf
+NID : 68
+EncryptionKey : 0953fa93e7caac9638f58820220a398e
+PrivacyKey : 8b84eedec100067d670971dd2aa700cf
+Network Nonce : 00043129ab0003000012345678
+IVI NID : 68
+CTL TTL : 04
+SEQ : 3129ab
+SRC : 0003
+DST : 1201
+TransportPDU : 8026ac01ece888aa2169326d23f3afdf
+NetMIC Size : 32 bits
+EncTransportPDU : 0afba8c63d4e6a1631c09deaf4fd40961145
+NetMIC : 70fe559f
+Obfuscation
+Privacy Random : 0000000000123456780afba8c63d4e6a
+PECB : 0ecdb48b3b87
+preObfuscation : 043129ab0003
+NetworkPDU : 680afc9d203b840afba8c63d4e6a1631c09deaf4fd4096114570fe559f
+
+------------------------------------------------------------------------------
+
+Unenc payload: 6803000007120134041201030400000000000000
+Enc   payload:
+Access Payload
+Opcode : 04 (Health Current Status)
+Source : 1201
+InitialTTL : 03
+NodeType : 04
+CompanyID : 0000
+Faults : 00
+Access Payload : 0412010304000000
+
+UpperTransportAccessPDU
+IV Index : 12345678
+
+AppKey : 63964771734fbd76e3b40519d1d94a48
+TTL : 03
+SEQ : 000007
+SRC : 1201
+DST : ffff
+Application Nonce : 01000000071201ffff12345678
+EncAccessPayload : 5a99df6e951e11c8
+TransMIC Size : 32 bits
+TransMIC : 10ea7715
+UpperTransportPDU : 5a99df6e951e11c810ea7715
+LowerTransportUnsegmentedAccessPDU
+CTL : 00
+TTL : 03
+SEQ : 000007
+SRC : 1201
+DST : ffff
+SEG : 00
+MD : 00
+AKF : 01
+AID : 14
+Header : 34
+UpperTransportPDU : 5a99df6e951e11c810ea7715
+LowerTransportPDU : 345a99df6e951e11c810ea7715
+NetworkPDU
+IVindex : 12345678
+NetKey : 7dd7364cd842ad18c17c2b820c84c3d6
+CTL : 00
+TTL : 03
+SEQ : 000007
+SRC : 1201
+DST : ffff
+LowerTransportPDU : 345a99df6e951e11c810ea7715
+NID : 68
+EncryptionKey : 0953fa93e7caac9638f58820220a398e
+PrivacyKey : 8b84eedec100067d670971dd2aa700cf
+Network Nonce : 00030000071201000012345678
+IVI NID : 68
+CTL TTL : 03
+SEQ : 000007
+SRC : 1201
+DST : ffff
+TransportPDU : 345a99df6e951e11c810ea7715
+NetMIC Size : 32 bits
+EncTransportPDU : 5673208a707eba3c4baec778009beb
+
+NetMIC : f97bf5cb
+Obfuscation
+Privacy Random : 0000000000123456785673208a707eba
+PECB : bb6ceaf3fcf2
+preObfuscation : 030000071201
+NetworkPDU : 68b86ceaf4eef35673208a707eba3c4baec778009bebf97bf5cb
+---------------------------------
+
+SAR sample data
+
+Devkey: 9d6dd0e96eb25dc19a40ed9914f8f03f
+NetPDU #1: 68043129ab000312018026ac01ece888aa2169326d23f3afdf00000000
+NetPDU #2: 68043129ac000312018026ac21cfdc18c52fdef77269ff443300000000
+
+
+-------------------------------------------------------------------
+
+
+ENC: e80307080d1234973634de1547b91658f1616274fe5800000000
+NNC: e80307080d1234973634ea0a00ff000000000000000000000000
+
+Access Payload : ea0a00ff
+
+AppKey : 63964771734fbd76e3b40519d1d94a48
+Application Nonce : 010007080d1234973612345677
+xb
+TransMIC Size : 64 bits
+TransMIC : 1658f1616274fe58
+
+Label UUID : f4a002c7fb1e4ca0a469a021de0db875
+DST (Virtual Address) : 9736
+
+EncAccessPayload : de1547b9
+
+UpperTransportPDU : de1547b91658f1616274fe58
+LowerTransportUnsegmentedAccessPDU
+CTL : 00
+TTL : 03
+SEQ : 07080d
+SRC : 1234
+DST : 9736
+SEG : 00
+MD : 00
+AKF : 01
+AID : 14
+Header : 34
+UpperTransportPDU : de1547b91658f1616274fe58
+LowerTransportPDU : 34de1547b91658f1616274fe58
+NetworkPDU
+IVindex : 12345677
+NetKey : 7dd7364cd842ad18c17c2b820c84c3d6
+CTL : 00
+TTL : 03
+SEQ : 07080d
+SRC : 1234
+DST : 9736
+LowerTransportPDU : 34de1547b91658f1616274fe58
+NID : 68
+EncryptionKey : 0953fa93e7caac9638f58820220a398e
+PrivacyKey : 8b84eedec100067d670971dd2aa700cf
+Network Nonce : 000307080d1234000012345677
+IVI NID : e8
+CTL TTL : 03
+SEQ : 07080d
+SRC : 1234
+DST : 9736
+TransportPDU : 34de1547b91658f1616274fe58
+NetMIC Size : 32 bits
+EncTransportPDU : 94e94aca29593d70172edbdad5706b
+NetMIC : 6d9d6681
+Obfuscation
+Privacy Random : 00000000001234567794e94aca29593d
+PECB : f9eda4412b1a
+preObfuscation : 0307080d1234
+NetworkPDU : e8faeaac4c392e94e94aca29593d70172edbdad5706b6d9d6681

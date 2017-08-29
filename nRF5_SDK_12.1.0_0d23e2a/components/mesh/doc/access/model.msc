@@ -1,0 +1,26 @@
+# MSC indicating how a model is interacted with
+
+msc {
+
+    hscale = "1.5";
+
+    app [label="Application"], access[label="Access layer"];
+
+    |||;
+    --- [label="Allocate model slot in the access layer" ];
+    app => access [label="access_model_alloc(...)" ];
+    app << access [label="handle" ];
+
+    |||;
+    --- [label="Bind model to an element" ];
+    app => access [label="access_model_add(handle, element)" ];
+    |||;
+    ...[label="Device is provisioned and configured..."];
+
+    |||;
+    --- [label="Send message to another device (client to server)" ];
+    app => access [label="access_model_publish(handle, &message)" ];
+    ...;
+    app <<= access [label="opcode_cb(handle, p_message)"];
+    app => access [label="access_model_reply(handle, p_message, &reply)"];
+}
