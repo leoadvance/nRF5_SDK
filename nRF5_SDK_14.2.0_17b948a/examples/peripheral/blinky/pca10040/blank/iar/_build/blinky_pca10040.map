@@ -1,0 +1,250 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.1.15669/W32 for ARM                19/Mar/2018  13:56:40
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.out
+#    Map file     =  
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.map
+#    Command line =  
+#        -f C:\Users\leo\AppData\Local\Temp\EW4262.tmp
+#        (C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\app_error.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\app_error_weak.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\app_util_platform.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\boards.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\iar_startup_nrf52.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\main.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_assert.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\nrf_strerror.o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\system_nrf52.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull -o
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.out
+#        --map
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build\blinky_pca10040.map
+#        --config
+#        C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\blinky_iar_nRF5x.icf
+#        --warnings_are_errors --entry __iar_program_start --inline --vfe
+#        --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0007ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x2000ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+keep { section .intvec };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                     0x200
+  .intvec            ro code  0x00000000  0x200  iar_startup_nrf52.o [1]
+                            - 0x00000200  0x200
+
+"P1":                                     0x4f4
+  .text              ro code  0x00000200  0x294  system_nrf52.o [1]
+  .text              ro code  0x00000494   0xa4  main.o [1]
+  .text              ro code  0x00000538   0xa0  boards.o [1]
+  .text              ro code  0x000005d8   0x2c  copy_init3.o [4]
+  .text              ro code  0x00000604   0x28  data_init.o [4]
+  .iar.init_table    const    0x0000062c   0x14  - Linker created -
+  .text              ro code  0x00000640   0x1e  cmain.o [4]
+  .text              ro code  0x0000065e    0x4  exit.o [3]
+  .text              ro code  0x00000662    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x00000664    0xa  cexit.o [4]
+  .text              ro code  0x0000066e    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x00000670    0xc  XXexit.o [4]
+  .text              ro code  0x0000067c   0x10  iar_startup_nrf52.o [1]
+  .text              ro code  0x0000068c    0xc  cstartup_M.o [4]
+  Initializer bytes  const    0x00000698    0x4  <for P2-1>
+  .text              ro code  0x0000069c    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x0000069e    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006a0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006a2    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006a4    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006a6    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006a8    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006aa    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ac    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ae    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006b0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006b2    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006b4    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006b6    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006b8    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ba    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006bc    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006be    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006c0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006c2    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006c4    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006c6    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006c8    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ca    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006cc    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ce    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006d0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006d2    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006d4    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006d6    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006d8    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006da    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006dc    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006de    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006e0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006e2    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006e4    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006e6    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006e8    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ea    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ec    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006ee    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006f0    0x2  iar_startup_nrf52.o [1]
+  .text              ro code  0x000006f2    0x2  iar_startup_nrf52.o [1]
+  .rodata            const    0x000006f4    0x0  copy_init3.o [4]
+                            - 0x000006f4  0x4f4
+
+"P2", part 1 of 2:                          0x4
+  P2-1                        0x20000000    0x4  <Init block>
+    .data            inited   0x20000000    0x4  system_nrf52.o [1]
+                            - 0x20000004    0x4
+
+"P2", part 2 of 2:                        0x800
+  CSTACK                      0x20000008  0x800  <Block>
+    CSTACK           uninit   0x20000008  0x800  <Block tail>
+                            - 0x20000808  0x800
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+          0x00000698   0x4
+    1 destination range, total size 0x4:
+          0x20000000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build: [1]
+    boards.o                 160
+    iar_startup_nrf52.o      620
+    main.o                   164
+    system_nrf52.o           660        4        4
+    ----------------------------------------------
+    Total:                 1 604        4        4
+
+command line: [2]
+    ----------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                     4
+    ----------------------------------------------
+    Total:                     4
+
+rt7M_tl.a: [4]
+    XXexit.o                  12
+    cexit.o                   10
+    cmain.o                   30
+    copy_init3.o              44
+    cstartup_M.o              12
+    data_init.o               40
+    ----------------------------------------------
+    Total:                   148
+
+    Linker created                     20    2 048
+--------------------------------------------------
+    Grand Total:           1 756       24    2 052
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x0000062c          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00000640          --   Gb  - Linker created -
+?main                   0x00000641         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000008          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000808          --   Gb  - Linker created -
+Region$$Table$$Base     0x0000062c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000640          --   Gb  - Linker created -
+SystemCoreClock         0x20000000    0x4  Data  Gb  system_nrf52.o [1]
+SystemInit              0x00000201  0x23e  Code  Gb  system_nrf52.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000ffff         Data  Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000         Data  Gb  command line/config [2]
+__Vectors               0x00000000          --   Gb  iar_startup_nrf52.o [1]
+__Vectors_End           0x00000200         Data  Gb  iar_startup_nrf52.o [1]
+__Vectors_Size {Abs}    0x00000200          --   Gb  iar_startup_nrf52.o [1]
+__cmain                 0x00000641         Code  Gb  cmain.o [4]
+__exit                  0x00000671         Code  Gb  XXexit.o [4]
+__iar_copy_init3        0x000005d9   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x00000605   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x0000068d         Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__vector_table          0x00000000         Data  Gb  iar_startup_nrf52.o [1]
+_call_main              0x0000064d         Code  Gb  cmain.o [4]
+_exit                   0x00000665         Code  Gb  cexit.o [4]
+_main                   0x0000065b         Code  Gb  cmain.o [4]
+bsp_board_led_invert    0x00000589   0x1a  Code  Gb  boards.o [1]
+bsp_board_led_off       0x0000056d    0x8  Code  Gb  boards.o [1]
+bsp_board_leds_init     0x000005a5   0x24  Code  Gb  boards.o [1]
+bsp_board_leds_off      0x00000575   0x12  Code  Gb  boards.o [1]
+exit                    0x0000065f    0x4  Code  Gb  exit.o [3]
+m_board_led_list        0x000005d4    0x4  Data  Lc  boards.o [1]
+main                    0x00000495   0xa4  Code  Gb  main.o [1]
+nrf_gpio_cfg            0x00000539   0x1e  Code  Lc  boards.o [1]
+nrf_gpio_pin_write      0x00000557   0x16  Code  Lc  boards.o [1]
+
+
+[1] = C:\LEO\myGit\nRF5_SDK\nRF5_SDK_14.2.0_17b948a\examples\peripheral\blinky\pca10040\blank\iar\_build
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = rt7M_tl.a
+
+  1 756 bytes of readonly  code memory
+     24 bytes of readonly  data memory
+  2 052 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
