@@ -1428,7 +1428,7 @@
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\event_groups.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\portable\MemMang\heap_1.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\portable\MemMang\heap_4.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\list.c</name>
