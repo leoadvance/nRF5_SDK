@@ -912,6 +912,20 @@ void vApplicationIdleHook( void )
 #endif
 }
 
+static void test_thread(void * arg)
+{
+
+	int i = 0;
+
+    // Enter main loop.
+    for (;;)
+    {
+  		i++;
+  		NRF_LOG_INFO("test_thread: %d", i);
+  		vTaskDelay(1000);
+    }
+}
+
 
 /** @brief Application main function. */
 int main(void)
@@ -953,6 +967,17 @@ int main(void)
         APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
     }
     NRF_LOG_INFO("USBD BLE UART example started.");
+    
+    // Start execution.
+    if (pdPASS != xTaskCreate(test_thread,
+                              "TEST",
+                              256,
+                              NULL,
+                              10,
+                              NULL))
+    {
+        APP_ERROR_HANDLER(NRF_ERROR_NO_MEM);
+    }
 
 
     ble_stack_init();

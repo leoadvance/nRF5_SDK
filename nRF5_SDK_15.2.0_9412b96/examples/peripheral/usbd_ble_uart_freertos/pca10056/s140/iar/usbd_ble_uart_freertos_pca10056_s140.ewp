@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Full formatting.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Full formatting.</state>
+                    <state>Full formatting, with multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -1293,7 +1293,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>usbd_ble_uart_freertos_pca10056_s140_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1331,10 +1331,16 @@
     <group>
         <name>Application</name>
         <file>
+            <name>$PROJ_DIR$\..\..\..\config\FreeRTOSConfig.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\main.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\config\sdk_config.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\_build\usbd_ble_uart_freertos_pca10056_s140.map</name>
         </file>
     </group>
     <group>
