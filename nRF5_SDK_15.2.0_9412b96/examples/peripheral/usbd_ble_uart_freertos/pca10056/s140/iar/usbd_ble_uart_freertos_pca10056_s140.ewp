@@ -500,6 +500,8 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\modules\nrfx\hal</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\modules\nrfx\mdk</state>
                     <state>$PROJ_DIR$\..\config</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1544,9 +1546,6 @@
     <group>
         <name>nRF_Segger_RTT</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_printf.c</name>
         </file>
         <file>
@@ -1593,6 +1592,21 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\queue.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger\SEGGER_RTT.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger\SEGGER_SYSVIEW.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_Config_FreeRTOS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_FreeRTOS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_FreeRTOS.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\stream_buffer.c</name>

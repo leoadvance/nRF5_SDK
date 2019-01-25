@@ -97,7 +97,7 @@ typedef unsigned long UBaseType_t;
     __ISB();                                                                    \
 }while (0)
 
-#define portEND_SWITCHING_ISR( xSwitchRequired ) if ( (xSwitchRequired) != pdFALSE ) portYIELD()
+#define portEND_SWITCHING_ISR( xSwitchRequired ) { if( xSwitchRequired != pdFALSE ) { traceISR_EXIT_TO_SCHEDULER(); portYIELD(); } else { traceISR_EXIT(); } }
 #define portYIELD_FROM_ISR( x ) portEND_SWITCHING_ISR( x )
 /*-----------------------------------------------------------*/
 

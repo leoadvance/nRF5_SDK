@@ -119,7 +119,7 @@ void xPortSysTickHandler( void )
 
     BaseType_t switch_req = pdFALSE;
     uint32_t isrstate = portSET_INTERRUPT_MASK_FROM_ISR();
-
+    traceISR_ENTER();
     uint32_t systick_counter = nrf_rtc_counter_get(portNRF_RTC_REG);
     nrf_rtc_event_clear(portNRF_RTC_REG, NRF_RTC_EVENT_TICK);
 
@@ -148,12 +148,16 @@ void xPortSysTickHandler( void )
     /* Increment the RTOS tick as usual which checks if there is a need for rescheduling */
     if ( switch_req != pdFALSE )
     {
+		traceISR_EXIT_TO_SCHEDULER();
         /* A context switch is required.  Context switching is performed in
         the PendSV interrupt.  Pend the PendSV interrupt. */
         SCB->ICSR = SCB_ICSR_PENDSVSET_Msk;
         __SEV();
     }
-
+    else
+    {
+        traceISR_EXIT();
+    }
     portCLEAR_INTERRUPT_MASK_FROM_ISR( isrstate );
 }
 

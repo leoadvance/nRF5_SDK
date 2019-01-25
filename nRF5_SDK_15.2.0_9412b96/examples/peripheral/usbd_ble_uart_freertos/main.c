@@ -90,6 +90,8 @@
 #include "task.h"
 #include "semphr.h"
 
+#include "SEGGER_SYSVIEW.h"
+
 /**
  * The size of the stack for the Logger task (in 32-bit words).
  * Logger uses sprintf internally so it is a rather stack hungry process.
@@ -931,6 +933,8 @@ static void test_thread(void * arg)
 int main(void)
 {
     ret_code_t ret;
+    
+    SEGGER_SYSVIEW_Conf();
     // Initialize.
     log_init();
     timers_init();
