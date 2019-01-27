@@ -500,8 +500,9 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\modules\nrfx\hal</state>
                     <state>$PROJ_DIR$\..\..\..\..\..\..\modules\nrfx\mdk</state>
                     <state>$PROJ_DIR$\..\config</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1544,9 +1545,6 @@
         </file>
     </group>
     <group>
-        <name>nRF_Segger_RTT</name>
-    </group>
-    <group>
         <name>nRF_SoftDevice</name>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\components\softdevice\common\nrf_sdh.c</name>
@@ -1559,6 +1557,45 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.c</name>
+        </file>
+    </group>
+    <group>
+        <name>segger_SystemView</name>
+        <group>
+            <name>config</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config\SEGGER_SYSVIEW_Config_FreeRTOS.c</name>
+            </file>
+        </group>
+        <group>
+            <name>source</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_RTT.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_RTT.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_SYSVIEW.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_SYSVIEW.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_SYSVIEW_ConfDefaults.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\source\SEGGER_SYSVIEW_Int.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\SEGGER_SYSVIEW_FreeRTOS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\SEGGER_SYSVIEW_FreeRTOS.h</name>
         </file>
     </group>
     <group>
@@ -1586,21 +1623,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\queue.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger\SEGGER_RTT.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\segger\SEGGER_SYSVIEW.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_Config_FreeRTOS.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_FreeRTOS.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\config\SEGGER_SYSVIEW_FreeRTOS.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\..\..\external\freertos\source\stream_buffer.c</name>
