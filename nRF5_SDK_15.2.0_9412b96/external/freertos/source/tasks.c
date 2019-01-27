@@ -3686,8 +3686,8 @@ static void prvCheckTasksWaitingTermination( void )
 	uint8_t* pxTaskGetStackStart( TaskHandle_t xTask)
 	{
 	    TCB_t *pxTCB;
-	    UBaseType_t uxReturn;
-        (void)uxReturn;
+//	    UBaseType_t uxReturn;
+//        (void)uxReturn;
 
 		pxTCB = prvGetTCBFromHandle( xTask );
 		return ( uint8_t * ) pxTCB->pxStack;

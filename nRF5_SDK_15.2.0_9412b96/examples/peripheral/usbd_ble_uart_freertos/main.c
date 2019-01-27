@@ -935,6 +935,7 @@ int main(void)
     ret_code_t ret;
     
     SEGGER_SYSVIEW_Conf();
+    SEGGER_SYSVIEW_Start();
     // Initialize.
     log_init();
     timers_init();

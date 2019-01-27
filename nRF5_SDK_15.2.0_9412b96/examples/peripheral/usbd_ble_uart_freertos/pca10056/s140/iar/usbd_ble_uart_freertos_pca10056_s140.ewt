@@ -1400,12 +1400,6 @@
     </group>
     <group>
         <name>nRF_Segger_RTT</name>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_printf.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Syscalls_IAR.c</name>
-        </file>
     </group>
     <group>
         <name>nRF_SoftDevice</name>
