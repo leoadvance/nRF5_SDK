@@ -139,7 +139,7 @@ Revision: $Rev: 6249 $
 //  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (*(U32 *)(0xE0001004))            // Retrieve a system timestamp. Cortex-M cycle counter.
 //  #define SEGGER_SYSVIEW_TIMESTAMP_BITS       32                                // Define number of valid bits low-order delivered by clock source
 
-  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (nrf_rtc_counter_get(NRF_RTC1))            // Retrieve a system timestamp. Cortex-M cycle counter.
+  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (nrf_rtc_counter_get(NRF_RTC0))            // Retrieve a system timestamp. Cortex-M cycle counter.
   #define SEGGER_SYSVIEW_TIMESTAMP_BITS       24                                // Define number of valid bits low-order delivered by clock source
 
 #else

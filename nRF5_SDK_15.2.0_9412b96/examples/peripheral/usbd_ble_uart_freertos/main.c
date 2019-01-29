@@ -923,7 +923,7 @@ static void test_thread(void * arg)
     for (;;)
     {
   		i++;
-  		NRF_LOG_INFO("test_thread: %d  RTC: %d, RTC2: %d", i, nrf_rtc_counter_get(NRF_RTC1), (*(U32 *)(0x40011504)));
+  		NRF_LOG_INFO("test_thread: %d  RTC: %d, RTC0: %d", i, nrf_rtc_counter_get(NRF_RTC1), (*(U32 *)(0x4000B504)));
   		vTaskDelay(1000);
     }
 }
