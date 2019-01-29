@@ -28,7 +28,7 @@ extern const SEGGER_SYSVIEW_OS_API SYSVIEW_X_OS_TraceAPI;
 #define SYSVIEW_DEVICE_NAME     "Cortex-M4F"
 
 // Frequency of the timestamp. Must match SEGGER_SYSVIEW_GET_TIMESTAMP in SEGGER_SYSVIEW_Conf.h
-#define SYSVIEW_TIMESTAMP_FREQ  (configCPU_CLOCK_HZ)
+#define SYSVIEW_TIMESTAMP_FREQ  (configTICK_RATE_HZ)
 
 // System Frequency. SystemcoreClock is used in most CMSIS compatible projects.
 #define SYSVIEW_CPU_FREQ        configCPU_CLOCK_HZ

@@ -64,7 +64,8 @@ Revision: $Rev: 6249 $
 
 #ifndef SEGGER_SYSVIEW_CONF_H
 #define SEGGER_SYSVIEW_CONF_H
-
+#include "nrf_rtc.h"
+#include "nrf52840.h"
 /*********************************************************************
 *
 *       Defines, fixed
@@ -135,8 +136,12 @@ Revision: $Rev: 6249 $
 *       SystemView timestamp configuration
 */
 #if SEGGER_SYSVIEW_CORE == SEGGER_SYSVIEW_CORE_CM3
-  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (*(U32 *)(0xE0001004))            // Retrieve a system timestamp. Cortex-M cycle counter.
-  #define SEGGER_SYSVIEW_TIMESTAMP_BITS       32                                // Define number of valid bits low-order delivered by clock source
+//  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (*(U32 *)(0xE0001004))            // Retrieve a system timestamp. Cortex-M cycle counter.
+//  #define SEGGER_SYSVIEW_TIMESTAMP_BITS       32                                // Define number of valid bits low-order delivered by clock source
+
+  #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (nrf_rtc_counter_get(NRF_RTC1))            // Retrieve a system timestamp. Cortex-M cycle counter.
+  #define SEGGER_SYSVIEW_TIMESTAMP_BITS       24                                // Define number of valid bits low-order delivered by clock source
+
 #else
   #define SEGGER_SYSVIEW_GET_TIMESTAMP()      SEGGER_SYSVIEW_X_GetTimestamp()   // Retrieve a system timestamp via user-defined function
   #define SEGGER_SYSVIEW_TIMESTAMP_BITS       32                                // Define number of valid bits low-order delivered by SEGGER_SYSVIEW_X_GetTimestamp()

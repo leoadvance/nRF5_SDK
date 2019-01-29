@@ -1418,6 +1418,15 @@
         <group>
             <name>config</name>
             <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config\Global.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config\SEGGER_RTT_Conf.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config\SEGGER_SYSVIEW_Conf.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\..\..\..\..\..\external\segger_systemview\config\SEGGER_SYSVIEW_Config_FreeRTOS.c</name>
             </file>
         </group>

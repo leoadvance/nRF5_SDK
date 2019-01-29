@@ -91,7 +91,7 @@
 #include "semphr.h"
 
 #include "SEGGER_SYSVIEW.h"
-
+#include "SEGGER_SYSVIEW_Conf.h"
 /**
  * The size of the stack for the Logger task (in 32-bit words).
  * Logger uses sprintf internally so it is a rather stack hungry process.
@@ -923,7 +923,7 @@ static void test_thread(void * arg)
     for (;;)
     {
   		i++;
-  		NRF_LOG_INFO("test_thread: %d", i);
+  		NRF_LOG_INFO("test_thread: %d  RTC: %d, RTC2: %d", i, nrf_rtc_counter_get(NRF_RTC1), (*(U32 *)(0x40011504)));
   		vTaskDelay(1000);
     }
 }
